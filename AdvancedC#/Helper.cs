@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AdvancedC_
 {
-    static class Helper<T>
+    static class Helper<T> 
     {
         #region incorrect usage 
         //public static void Swap(ref int x, ref int y)
@@ -56,6 +57,21 @@ namespace AdvancedC_
         public static void Print<T>(string s)
         {
             Console.WriteLine($"{s}");
+        }
+        public static int Linearsearch(T []arr,T value)
+        {
+            if (arr?.Length>0 && value is not null)
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    if (arr[i].Equals(value))
+                    {
+                        return i;
+                    }
+                }
+            }
+            return -1;
+
         }
 
 
