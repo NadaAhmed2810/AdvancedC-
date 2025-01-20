@@ -82,23 +82,30 @@
             //    Console.WriteLine(arr[i]);  
             //}
 
-            Employee[] employees =
-            {
-                new Employee(){Id=12,Name="Noura",Salary=10000},
-                new Employee(){Id=11,Name="Nour",Salary=5000},
-                new Employee(){Id=22,Name="Nada",Salary=6000},
-            };
-            Helper<Employee>.BubbleSort(employees);
-            foreach (Employee employee in employees)
-            {
-                Console.WriteLine(employee);
-            }
-            Helper<Employee>.BubbleSort(employees,new EmployeeComparerByName());
-            foreach (Employee employee in employees)
-            {
-                Console.WriteLine(employee);
-            }
+            #region using Icomparer
+            //Employee[] employees =
+            //{
+            //    new Employee(){Id=12,Name="Noura",Salary=10000},
+            //    new Employee(){Id=11,Name="Nour",Salary=5000},
+            //    new Employee(){Id=22,Name="Nada",Salary=6000},
+            //};
+            //Helper<Employee>.BubbleSort(employees);
+            //foreach (Employee employee in employees)
+            //{
+            //    Console.WriteLine(employee);
+            //}
+            //Helper<Employee>.BubbleSort(employees, new EmployeeComparerByName());
+            //foreach (Employee employee in employees)
+            //{
+            //    Console.WriteLine(employee);
+            //}
+            #endregion
 
+            //Helper<Employee>.BubbleSort(employees,(X,Y)=>X.Id.CompareTo(Y.Id)==1);
+            //foreach (Employee employee in employees)
+            //{
+            //    Console.WriteLine(employee);
+            //}
             #endregion
 
         }
