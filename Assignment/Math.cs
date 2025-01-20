@@ -44,5 +44,18 @@ namespace Assignment
                     Swap(ref arr[i],ref arr[arr.Length-1-i]);
                 }
         }
+        public static List<int> GetEvenNumbers(List<int>list)
+        {
+            List<int> Result = new List<int>();
+            if (list is not null && list.Count > 0)
+            {
+                for(int i = 0; i < list.Count; i++)
+                {
+                    if(list[i] %2==0)
+                        Result.Add(list[i]);
+                }
+            }
+            return Result;
+        }
     }
 }

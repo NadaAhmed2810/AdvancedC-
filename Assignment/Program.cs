@@ -33,6 +33,22 @@ namespace Assignment
             //    Console.WriteLine(arr[i]);
             //}
             #endregion
+            #region Q4:Get Even Number
+            //List<int> list = new List<int>();
+            //list.Add(1);
+            //list.Add(3);
+            //list.Add(5);
+            
+            //List<int> result=Math<int>.GetEvenNumbers(list);
+            //if (result is not null && result.Count() > 0)
+            //{
+            //    for (int i = 0; i < result.Count; i++)
+            //    {
+            //        Console.WriteLine(result[i]);
+            //    }
+            //}
+            //else Console.WriteLine("List Not has Even number");
+            #endregion
         }
     }
 }
