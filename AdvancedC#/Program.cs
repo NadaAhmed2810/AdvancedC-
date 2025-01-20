@@ -49,24 +49,24 @@
             //    else Console.WriteLine("not Equal");  
             #endregion
             #region Equality and Hash Code
-            Employee E01 = new Employee() { Id = 10, Name = "Noura", Salary = 5000 };
-            Employee E02 = new Employee() { Id = 10, Name = "Noura", Salary = 5000 };
-            Console.WriteLine(E01.GetHashCode());
-            Console.WriteLine(E02.GetHashCode());
+            //Employee E01 = new Employee() { Id = 10, Name = "Noura", Salary = 5000 };
+            //Employee E02 = new Employee() { Id = 10, Name = "Noura", Salary = 5000 };
+            //Console.WriteLine(E01.GetHashCode());
+            //Console.WriteLine(E02.GetHashCode());
           
-             if (E01.Equals(E02))
-                //if (E01==E02)
-            {
-                Console.WriteLine("Equal ");
-            }
-            else Console.WriteLine("not Equal");
-             HashSet<Employee>employees = new HashSet<Employee>();
-            employees.Add(E01);
-            employees.Add(E02);
-            foreach (Employee e in employees)
-            {
-                Console.WriteLine(e);
-            }
+            // if (E01.Equals(E02))
+            //    //if (E01==E02)
+            //{
+            //    Console.WriteLine("Equal ");
+            //}
+            //else Console.WriteLine("not Equal");
+            // HashSet<Employee>employees = new HashSet<Employee>();
+            //employees.Add(E01);
+            //employees.Add(E02);
+            //foreach (Employee e in employees)
+            //{
+            //    Console.WriteLine(e);
+            //}
             #endregion
         }
     }

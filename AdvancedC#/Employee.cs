@@ -23,13 +23,32 @@ namespace AdvancedC_
         //}
         public override bool Equals(object? obj)
         {
-            /*Employee? other =  (Employee?)obj ;//un safe [Invalid Casting]*/
+            #region Is Operator
+            //1. Is Operator
+            //if (obj is Employee other)//true if obj is Employee Or Class Inherits from Employee
+            //{
+            //    return Id == other.Id && Name == other.Name && Salary == other.Salary;
+            //}
+            //return false; 
+            #endregion
+            #region As Operator
             Employee? other = obj as Employee;
-            if (other is not null)
+            if (other != null)
             {
-                return Id==other.Id && Name==other.Name && Salary==other.Salary;
+                return Id == other.Id && Name == other.Name && Salary == other.Salary;
             }
             return false;
+            #endregion
+            #region wrong
+            //Employee? other;//un safe [Invalid Casting]
+            //other = (Employee?)obj;
+            //if (other != null)
+            //{
+            //    return Id==other.Id && Name==other.Name && Salary==other.Salary;
+            //}
+            //return false; 
+            #endregion
+
 
         }
         public override int GetHashCode()
