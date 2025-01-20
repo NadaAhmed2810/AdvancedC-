@@ -23,7 +23,8 @@ namespace AdvancedC_
         //}
         public override bool Equals(object? obj)
         {
-            Employee? other = obj as Employee;//un safe
+            /*Employee? other =  (Employee?)obj ;//un safe [Invalid Casting]*/
+            Employee? other = obj as Employee;
             if (other is not null)
             {
                 return Id==other.Id && Name==other.Name && Salary==other.Salary;
@@ -33,7 +34,19 @@ namespace AdvancedC_
         }
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id, Name, Salary);
+          
+            int hashvalue = 11;
+            hashvalue= hashvalue*7 ^ Id.GetHashCode();
+            hashvalue= hashvalue*7 ^ Name?.GetHashCode()??0;
+            hashvalue= hashvalue*7 ^ Salary.GetHashCode();
+            return hashvalue;
+            // return Id.GetHashCode()^Name?.GetHashCode()??0^Salary.GetHashCode();//not valid
+            // return Id.GetHashCode() + Name?.GetHashCode() ?? 0 + Salary.GetHashCode();//take time and not valid
+            //return HashCode.Combine(Id, Name, Salary);
+        }
+        public override string ToString()
+        {
+            return $"Id:{Id},Name:{Name},Salary:{Salary}";
         }
     }
 }
