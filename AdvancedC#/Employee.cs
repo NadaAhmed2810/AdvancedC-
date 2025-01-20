@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdvancedC_
 {
-    internal class Employee
+    internal class Employee:IEquatable<Employee>
     {
         public int Id { get; set; }
         public string? Name { get; set; }
@@ -21,36 +21,46 @@ namespace AdvancedC_
         //{
         //    return !(E1==E2);
         //}
-        public override bool Equals(object? obj)
+        //public override bool Equals(object? obj)
+        //{
+        //    #region Is Operator
+        //    //1. Is Operator
+        //    //if (obj is Employee other)//true if obj is Employee Or Class Inherits from Employee
+        //    //{
+        //    //    return Id == other.Id && Name == other.Name && Salary == other.Salary;
+        //    //}
+        //    //return false; 
+        //    #endregion
+        //    #region As Operator
+        //    //Employee? other = obj as Employee;
+        //    //if (other != null)
+        //    //{
+        //    //    return Id == other.Id && Name == other.Name && Salary == other.Salary;
+        //    //}
+        //    //return false;
+        //    #endregion
+        //    #region wrong
+        //    //Employee? other;//un safe [Invalid Casting]
+        //    //other = (Employee?)obj;
+        //    //if (other != null)
+        //    //{
+        //    //    return Id==other.Id && Name==other.Name && Salary==other.Salary;
+        //    //}
+        //    //return false; 
+        //    #endregion
+
+
+        //}
+
+        public bool Equals(Employee? other)
         {
-            #region Is Operator
-            //1. Is Operator
-            //if (obj is Employee other)//true if obj is Employee Or Class Inherits from Employee
-            //{
-            //    return Id == other.Id && Name == other.Name && Salary == other.Salary;
-            //}
-            //return false; 
-            #endregion
-            #region As Operator
-            Employee? other = obj as Employee;
             if (other != null)
             {
                 return Id == other.Id && Name == other.Name && Salary == other.Salary;
             }
             return false;
-            #endregion
-            #region wrong
-            //Employee? other;//un safe [Invalid Casting]
-            //other = (Employee?)obj;
-            //if (other != null)
-            //{
-            //    return Id==other.Id && Name==other.Name && Salary==other.Salary;
-            //}
-            //return false; 
-            #endregion
-
-
         }
+
         public override int GetHashCode()
         {
           
