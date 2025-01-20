@@ -1,10 +1,38 @@
 ﻿using Assignment.Question2;
+using Assignment.Question5;
 
 namespace Assignment
 {
     internal class Program
     {
-      
+        public static int FirstNonRepeatedChar(string s)
+        {
+            int res = -1;
+            Dictionary<Char,int> dict = new Dictionary<Char,int>();
+            if (s != null)
+            {
+                for (int i = 0; i < s.Length; i++)
+                {
+                    if (dict.ContainsKey(s[i]))
+                    {
+                        dict[s[i]]++;
+                    }
+                    else
+                    {
+                        dict[s[i]] = 1; 
+                    }
+                }
+                for (int i = 0;i < s.Length; i++)
+                {
+                    if (dict[s[i]] == 1)
+                    {
+                        res = i;
+                        return res;
+                    }
+                }
+            }
+            return res;
+        }
         static void Main(string[] args)
         {
             #region Q1:Improve Bubble Sort Algorithm
@@ -38,7 +66,7 @@ namespace Assignment
             //list.Add(1);
             //list.Add(3);
             //list.Add(5);
-            
+
             //List<int> result=Math<int>.GetEvenNumbers(list);
             //if (result is not null && result.Count() > 0)
             //{
@@ -48,6 +76,40 @@ namespace Assignment
             //    }
             //}
             //else Console.WriteLine("List Not has Even number");
+            #endregion
+            #region Q5:FixedSizeList
+            //var FixedSizeList = new Fixed_Size_List<double>(10);
+            //double x = 1;
+            //for(int i = 0; i < 11; i++)
+            //{
+            //    try
+            //    {
+            //        FixedSizeList.Add(x += .5);
+            //    }
+            //    catch 
+            //    {
+            //        Console.WriteLine("List Is Full");
+            //    }
+
+            //}
+            //try
+            //{
+            //    FixedSizeList.Get(0);
+            //    FixedSizeList.Get(1);
+            //    FixedSizeList.Get(10);
+            //    FixedSizeList.Get(-5);
+            //}
+            //catch
+            //{
+            //    Console.WriteLine("Invalid index");
+            //}
+
+
+
+            #endregion
+            #region Q6:Given a string, find the first non-repeated character in it and return its index. If there is no such character, return -1
+           // string Name ="NouraandNour";
+           //Console.WriteLine( FirstNonRepeatedChar(Name));
             #endregion
         }
     }
