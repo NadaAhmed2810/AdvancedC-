@@ -36,5 +36,13 @@ namespace Assignment
             }
             return;
         }
+        public static void InverseOrder(T[] arr)
+        {
+            if(arr is not null && arr?.Length > 0)
+                for (int i = 0; i < arr.Length/2; i++)
+                {
+                    Swap(ref arr[i],ref arr[arr.Length-1-i]);
+                }
+        }
     }
 }

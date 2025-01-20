@@ -25,7 +25,14 @@ namespace Assignment
             //Console.WriteLine(R01.IsInRange(0));
             //Console.WriteLine($"Range:{R02.Length()}");
             #endregion
-
+            #region Q3:Inverse Order in place
+            //int[] arr = [1, 2, 0, 4, -200,1];
+            //Math<int>.InverseOrder(arr);
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    Console.WriteLine(arr[i]);
+            //}
+            #endregion
         }
     }
 }
