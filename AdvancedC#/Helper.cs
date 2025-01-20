@@ -8,8 +8,26 @@ using System.Threading.Tasks;
 
 namespace AdvancedC_
 {
-    static class Helper<T> 
+    static class Helper<T> where T:IComparable<T>
     {
+
+        public static void BubbleSort(T [] arr)
+        {
+            if (arr is not null && arr?.Length>0)
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    for(int j = 0; j < arr.Length - i - 1; j++)
+                    {
+                        if (arr[j].CompareTo(arr[j+1])>0)
+                        {
+                          Swap(ref arr[j], ref arr[j + 1]);
+                        }
+                    }
+                }
+            }
+            return ;    
+        }
         #region incorrect usage 
         //public static void Swap(ref int x, ref int y)
         //{

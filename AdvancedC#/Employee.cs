@@ -31,11 +31,19 @@ namespace AdvancedC_
             return HashCode.Combine(obj.Name);
         }
     }
-    internal class Employee:IEquatable<Employee>
+    internal class Employee:IEquatable<Employee>,IComparable<Employee>
     {
         public int Id { get; set; }
         public string? Name { get; set; }
         public decimal Salary {  get; set; }
+
+      
+
+        public int CompareTo(Employee? other)
+        {
+           if(other == null) return 1;
+           return Salary.CompareTo(other.Salary);
+        }
 
         //public static bool operator ==(Employee E1,Employee E2)
         //{

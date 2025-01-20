@@ -74,6 +74,27 @@
             //    Console.WriteLine(e);
             //}
             #endregion
+            #region BubbleSort
+            ///int[] arr = {2,0,7,5,3,11,-1,1,-100 };
+            //Helper<int>.BubbleSort(arr);
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    Console.WriteLine(arr[i]);  
+            //}
+
+            Employee[] employees =
+            {
+                new Employee(){Id=12,Name="Noura",Salary=10000},
+                new Employee(){Id=11,Name="Nour",Salary=5000},
+                new Employee(){Id=22,Name="Nada",Salary=6000},
+            };
+            Helper<Employee>.BubbleSort(employees);
+            foreach (Employee employee in employees)
+            {
+                Console.WriteLine(employee);
+            }
+
+            #endregion
 
         }
     }
