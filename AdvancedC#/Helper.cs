@@ -10,6 +10,20 @@ namespace AdvancedC_
 {
     static class Helper<T> where T:IComparable<T>
     {
+        ///primary Constraint[0:1]
+        //        1.General primary Constraint 
+        //                  Class
+        //                  struct
+        //                  Notnull
+        //                  Default
+        //                  unmanaged 
+        //        2.Special primary constraint(user defined class expect sealed)
+        //                  Enum
+        //Secondary Constraint[0:M]
+        // interface
+        //T must implemented ...
+        //paramater less constraint[0:1]
+
 
         public static void BubbleSort(T [] arr)
         {
