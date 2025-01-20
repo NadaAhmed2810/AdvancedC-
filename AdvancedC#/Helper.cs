@@ -88,6 +88,22 @@ namespace AdvancedC_
             return -1;
 
         }
+        public static int Linearsearch(T[] arr, T value,Func<T,T,bool> Equal)
+        {
+            if (arr?.Length > 0 && value is not null)
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    if (Equal(value, arr[i]))
+                    {
+                        return i;
+                    }
+                }
+            }
+            return -1;
+
+        }
+
 
 
     }

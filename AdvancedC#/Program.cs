@@ -31,14 +31,20 @@
             //int[] nums = [1, 2, 5, 7, 9, 0, 3, 6];
             //int result = Helper<int>.Linearsearch(nums, 8);
             //Console.WriteLine($"Index: {result}");
-            Employee[] employees =
-            {
-                new Employee(){Id=12,Name="Noura",Salary=3000},
-                new Employee(){Id=11,Name="Nour",Salary=5000},
-                new Employee(){Id=22,Name="Nada",Salary=6000},
-            };
-            int result = Helper<Employee>.Linearsearch(employees, new Employee() {  Name = "Noura" },new EmployeeEqualityComparerByName());
-            Console.WriteLine(result);
+            //Employee[] employees =
+            //{
+            //    new Employee(){Id=12,Name="Noura",Salary=3000},
+            //    new Employee(){Id=11,Name="Nour",Salary=5000},
+            //    new Employee(){Id=22,Name="Nada",Salary=6000},
+            //};
+            //Func<Employee, Employee, bool> equals = delegate (Employee X, Employee Y) { return X.Name == Y.Name; };
+            //int Result = Helper<Employee>.Linearsearch(employees, new Employee() 
+            //{ Id = 10, Name = "Noura", Salary = 3000 },equals);
+            //int Result1 = Helper<Employee>.Linearsearch(employees, new Employee() 
+            //{ Id = 10, Name = "Noura", Salary = 3000 },  ( X,  Y)  => X.Name == Y.Name );
+
+            //int result = Helper<Employee>.Linearsearch(employees, new Employee() {  Name = "Noura" },new EmployeeEqualityComparerByName());
+            //Console.WriteLine(result);
 
             //    Employee employee = new Employee() { Id=10,Name="Noura",Salary=3000 };
             //    Employee employee2 = new Employee() { Id = 10, Name = "Noura", Salary = 3000 };
