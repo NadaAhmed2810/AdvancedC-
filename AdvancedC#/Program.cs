@@ -93,6 +93,11 @@
             {
                 Console.WriteLine(employee);
             }
+            Helper<Employee>.BubbleSort(employees,new EmployeeComparerByName());
+            foreach (Employee employee in employees)
+            {
+                Console.WriteLine(employee);
+            }
 
             #endregion
 

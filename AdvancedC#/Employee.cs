@@ -7,6 +7,32 @@ using System.Threading.Tasks;
 
 namespace AdvancedC_
 {
+    class EmployeeComparerByName : IComparer<Employee>
+    {
+        public int Compare(Employee? x, Employee? y)
+        {
+         
+            return x?.Name.CompareTo(y?.Name ?? "") ?? (y is null ? 0 : -1);
+        }
+    }
+    class EmployeeComparerById : IComparer<Employee>
+    {
+        public int Compare(Employee? x, Employee? y)
+        {
+            //if (x == null)
+            //{
+            //    if (y == null)
+            //        return 0;
+            //    else return -1;
+            //}
+            //else
+            //{
+            //    if (y == null) return 1;
+            //    else x.Id.CompareTo(y.Id);
+            //}
+            return x?.Id.CompareTo(y?.Id??0)??( y is null?0:-1);
+        }
+    }
     class EmployeeEqualityComparerById : IEqualityComparer<Employee>
     {
         public bool Equals(Employee? x, Employee? y)
